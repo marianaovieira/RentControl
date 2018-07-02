@@ -3,7 +3,7 @@
     package="br.iff.pooa20181.rentcontrol">
 
     <application
-        android:name='.model.BDConfig'
+        android:name=".model.BDConfig"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,7 +21,8 @@
             android:name=".activity.ListaContratos"
             android:label="@string/title_activity_lista_contratos"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.ContratoDetalhe"></activity>
+        <activity android:name=".activity.ContratoDetalhe" />
+        <activity android:name=".activity.ItemContratos"></activity>
     </application>
 
 </manifest>

@@ -27,6 +27,16 @@ public class Contratos extends RealmObject implements Serializable {
 
     }
 
+    public Contratos(int id, String nome_locador, String nome_locatario, String cep, String valor_aluguel){
+
+        this.id = id;
+        this.nome_locatario = nome_locatario;
+        this.nome_locador = nome_locador;
+        this.valor_aluguel = valor_aluguel;
+
+
+    }
+
     public Contratos(int id, String nome_locador, String telefone_locador,String email_locador, String nome_locatario, String telefone_locatario, String email_locatario, String rua, String cep, String valor_aluguel, String numero, String cidade){
 
         this.id = id;
