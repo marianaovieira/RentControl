@@ -1,6 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
+realm{
+
+    syncEnabled = true;
+
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {

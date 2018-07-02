@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView( R.layout.activity_main );
 
         Button btnContrato = (Button) findViewById( R.id.btnEntrarLogin );
+        Button btnCadastro = (Button) findViewById( R.id.btnFazerCadastro );
 
         btnContrato.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btnCadastro.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( getContext(), CadastroUsuario.class );
+                startActivity( intent );
+            }
+        } );
 
 
     }

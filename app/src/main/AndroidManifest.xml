@@ -22,7 +22,8 @@
             android:label="@string/title_activity_lista_contratos"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.ContratoDetalhe" />
-        <activity android:name=".activity.Login"></activity>
+        <activity android:name=".activity.Login" />
+        <activity android:name=".activity.CadastroUsuario"></activity>
     </application>
 
 </manifest>
