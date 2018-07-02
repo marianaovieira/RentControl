@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
-        Button btnContrato = (Button) findViewById( R.id.btnContrato );
+        Button btnContrato = (Button) findViewById( R.id.btnEntrarLogin );
 
         btnContrato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ListaContratos.class);
+                Intent intent = new Intent(getContext(), Login.class);
                 startActivity(intent);
 
             }
