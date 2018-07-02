@@ -1,12 +1,12 @@
 package br.iff.pooa20181.rentcontrol.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import br.iff.pooa20181.rentcontrol.ListaContratos;
 import br.iff.pooa20181.rentcontrol.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,11 +21,15 @@ public class MainActivity extends AppCompatActivity {
         btnContrato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListaContratos.class);
+                Intent intent = new Intent(getContext(), ListaContratos.class);
                 startActivity(intent);
 
             }
         });
 
+
+    }
+    private Context getContext(){
+        return this;
     }
 }

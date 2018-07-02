@@ -17,14 +17,17 @@ public class Contratos extends RealmObject implements Serializable {
     private String email_locatario;
     private String rua;
     private String cep;
+    private String numero;
     private String cidade;
+    private String valor_aluguel;
+
 
 
     public Contratos(){
 
     }
 
-    public Contratos(int id, String nome_locador, String telefone_locador,String email_locador, String nome_locatario, String telefone_locatario, String email_locatario, String rua, String cep, String valor_aluguel, String cidade){
+    public Contratos(int id, String nome_locador, String telefone_locador,String email_locador, String nome_locatario, String telefone_locatario, String email_locatario, String rua, String cep, String valor_aluguel, String numero, String cidade){
 
         this.id = id;
         this.nome_locador = nome_locador;
@@ -35,6 +38,7 @@ public class Contratos extends RealmObject implements Serializable {
         this.email_locatario = email_locatario;
         this.rua = rua;
         this.cep = cep;
+        this.numero = numero;
         this.cidade = cidade;
 
     }
@@ -114,12 +118,12 @@ public class Contratos extends RealmObject implements Serializable {
         this.cep = cep;
     }
 
-    public String getCidade() {
-        return cidade;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public String getValor_aluguel() {
@@ -130,6 +134,13 @@ public class Contratos extends RealmObject implements Serializable {
         this.valor_aluguel = valor_aluguel;
     }
 
-    private String valor_aluguel;
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
 
 }
