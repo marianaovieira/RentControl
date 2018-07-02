@@ -24,6 +24,7 @@ public class ListaContratos extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ListaContratos.this, ContratoDetalhe.class);
+                intent.putExtra("id",0);
                 startActivity(intent);
             }
         } );

@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtEmailLocador" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/txtNomeLocatario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTelefoneLocador" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/txtEmailLocatario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -104,10 +104,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeLocatario" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/txtTelefoneLocatario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -118,7 +118,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailLocatario" />
 
     <EditText
         android:id="@+id/txtRuaImovel"
@@ -132,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefoneLocatario" />
 
     <EditText
         android:id="@+id/txtCepImovel"
@@ -180,20 +180,20 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/btnSalvar"
         app:layout_constraintTop_toBottomOf="@+id/txtValor" />
 
     <Button
-        android:id="@+id/btnExcluir"
+        android:id="@+id/btnAlterar"
         android:layout_width="111dp"
         android:layout_height="42dp"
         android:text="Alterar"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/btnSalvar"
         app:layout_constraintTop_toBottomOf="@+id/txtValor" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSalvar"
         android:layout_width="113dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
