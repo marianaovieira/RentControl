@@ -9,6 +9,11 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:name=".model.BDConfig"
         android:allowBackup="true"
@@ -26,7 +31,7 @@
         </activity>
         <activity
             android:name=".activity.ListaContratos"
-            android:label="@string/title_activity_lista_contratos"
+            android:label="Lista de Contratos"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.ContratoDetalhe" />
 
@@ -44,7 +49,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
     </application>
 
 </manifest>
