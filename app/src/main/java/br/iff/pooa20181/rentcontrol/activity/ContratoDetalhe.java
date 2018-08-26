@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import br.iff.pooa20181.rentcontrol.MapsActivity;
+
 import br.iff.pooa20181.rentcontrol.R;
 import br.iff.pooa20181.rentcontrol.model.Contratos;
 import io.realm.Realm;
