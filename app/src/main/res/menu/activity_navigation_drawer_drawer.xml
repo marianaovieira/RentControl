@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_contrato"
+            android:icon="@drawable/ic_description_24dp"
+            android:title="Contratos de Aluguel" />
+        <item
+            android:id="@+id/nav_inquilino"
+            android:icon="@drawable/ic_person_24dp"
+            android:title="Inquilinos" />
+        <item
+            android:id="@+id/nav_imoveis"
+            android:icon="@drawable/ic_home_24dp"
+            android:title="Imóveis" />
+        <item
+            android:id="@+id/nav_alugueis"
+            android:icon="@drawable/ic_monetization_24dp"
+            android:title="Aluguéis" />
+        <item
+            android:id="@+id/nav_notas"
+            android:icon="@drawable/ic_attachment_24dp"
+            android:title="Notas" />
+    </group>
+
+
+
+</menu>
