@@ -17,24 +17,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView( R.layout.activity_main );
 
         Button btnContrato = (Button) findViewById( R.id.btnEntrarLogin );
-        Button btnCadastro = (Button) findViewById( R.id.btnFazerCadastro );
+
 
         btnContrato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), Login.class);
+                Intent intent = new Intent(getContext(), ListaContratos.class);
                 startActivity(intent);
 
             }
         });
 
-        btnCadastro.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent( getContext(), CadastroUsuario.class );
-                startActivity( intent );
-            }
-        } );
+
 
 
     }
