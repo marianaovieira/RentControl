@@ -224,7 +224,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
                 android:backgroundTint="@android:color/white"
-                android:text="Excluir"
+                android:text="EXCLUIR"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
