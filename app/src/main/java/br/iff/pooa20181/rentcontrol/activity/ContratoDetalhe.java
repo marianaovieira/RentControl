@@ -1,5 +1,6 @@
 package br.iff.pooa20181.rentcontrol.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import br.iff.pooa20181.rentcontrol.MapsActivity;
 import br.iff.pooa20181.rentcontrol.R;
 import br.iff.pooa20181.rentcontrol.model.Contratos;
 import io.realm.Realm;
@@ -17,7 +19,7 @@ import io.realm.Realm;
 public class ContratoDetalhe extends AppCompatActivity {
 
     EditText edNomeLocador, edEmailLocador, edTelefoneLocador, edNomeLocatario, edEmailLocatario, edTelefoneLocatario, edRua, edNumero, edCep, edCidade, edValor;
-    Button btnSalvar, btnAlterar, btnExcluir;
+    Button btnSalvar, btnAlterar, btnExcluir, btnVerMapa;
 
     int id;
     Contratos contratos;
@@ -44,10 +46,20 @@ public class ContratoDetalhe extends AppCompatActivity {
         btnSalvar = (Button) findViewById( R.id.btnSalvar );
         btnAlterar = (Button) findViewById( R.id.btnAlterar );
         btnExcluir = (Button) findViewById( R.id.btnExcluir );
+        btnVerMapa = (Button) findViewById( R.id.btnVerMapa );
 
         Intent intent = getIntent();
         id = (int) intent.getSerializableExtra("id");
         realm = Realm.getDefaultInstance();
+
+        btnVerMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MapsActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         if(id != 0)
         {
@@ -59,6 +71,10 @@ public class ContratoDetalhe extends AppCompatActivity {
             btnAlterar.setEnabled(true);
             btnAlterar.setClickable(true);
             btnAlterar.setVisibility(View.VISIBLE);
+
+            btnVerMapa.setEnabled(true);
+            btnVerMapa.setClickable(true);
+            btnVerMapa.setVisibility(View.VISIBLE);
 
 
             contratos = realm.where(Contratos.class).equalTo("id",id).findFirst();
@@ -81,9 +97,14 @@ public class ContratoDetalhe extends AppCompatActivity {
             btnAlterar.setEnabled(false);
             btnAlterar.setClickable(false);
             btnAlterar.setVisibility(View.INVISIBLE);
+
             btnExcluir.setEnabled(false);
             btnExcluir.setClickable(false);
             btnExcluir.setVisibility(View.INVISIBLE);
+
+            btnVerMapa.setEnabled(false);
+            btnVerMapa.setClickable(false);
+            btnVerMapa.setVisibility(View.INVISIBLE);
         }
 
         btnSalvar.setOnClickListener( new View.OnClickListener(){
@@ -171,7 +192,12 @@ public class ContratoDetalhe extends AppCompatActivity {
         this.finish();
 
     }
+
+    private Context getContext(){
+        return this;
+    }
 }
+
 
 
 

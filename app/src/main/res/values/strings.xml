@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RentControl</string>
     <string name="title_activity_lista_contratos">ListaContratos</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
