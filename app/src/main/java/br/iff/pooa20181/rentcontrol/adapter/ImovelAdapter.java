@@ -51,8 +51,6 @@ public class ImovelAdapter extends RecyclerView.Adapter {
         imoveisHolder.nomeProprietario.setText( imoveis.getNomeProp() );
         imoveisHolder.valorAluguel.setText( imoveis.getValor() );
         imoveisHolder.cepImovel.setText( imoveis.getCep() );
-
-
     }
 
     @Override

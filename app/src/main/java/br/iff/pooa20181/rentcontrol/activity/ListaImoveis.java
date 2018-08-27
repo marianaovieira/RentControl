@@ -24,7 +24,7 @@ public class ListaImoveis extends AppCompatActivity implements ClickRecyclerView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_contratos);
+        setContentView(R.layout.activity_imovel);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -39,23 +39,18 @@ public class ListaImoveis extends AppCompatActivity implements ClickRecyclerView
                 startActivity(intent);
             }
         });
-
-
     }
 
     protected void onResume() {
-
         super.onResume();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.lista_imoveis);
-        //recyclerView.setAdapter(new ImovelAdapter(getImoveis(),this,this));
-        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
+        recyclerView.setAdapter(new ImovelAdapter(getImoveis(),this,this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public List<Imovel> getImoveis(){
+    public List getImoveis(){
 
-        return (List) realm.where(Imovel.class).findAll();
+        return realm.where(Imovel.class).findAll();
 
     }
 
@@ -67,11 +62,8 @@ public class ListaImoveis extends AppCompatActivity implements ClickRecyclerView
         startActivity(intent);
     }
 
-
-
     public void finish(){
         super.finish();
         realm.close();
     }
-
 }
