@@ -40,27 +40,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="Cep imóvel:"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="63dp" />
+            app:layout_constraintTop_toBottomOf="@+id/idValorAluguel" />
 
         <TextView
             android:id="@+id/tvCepImovel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="TextView"
             app:layout_constraintStart_toEndOf="@+id/idCepImovel"
-            tools:layout_editor_absoluteY="63dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tvNomeLocatario" />
 
         <TextView
             android:id="@+id/tvNomeLocatario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="TextView"
-            app:layout_constraintTop_toBottomOf="@+id/tvNomeProprietário"
-            tools:layout_editor_absoluteX="128dp" />
+            app:layout_constraintStart_toEndOf="@+id/idValorAluguel"
+            app:layout_constraintTop_toBottomOf="@+id/tvNomeProprietário" />
 
         <TextView
             android:id="@+id/tvNomeProprietário"

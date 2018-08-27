@@ -56,7 +56,7 @@ public class ImovelDetalhe extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), MapsActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, id);
 
             }
         });

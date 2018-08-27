@@ -20,10 +20,14 @@ import java.io.IOException;
 import java.util.List;
 
 import br.iff.pooa20181.rentcontrol.activity.ContratoDetalhe;
+import br.iff.pooa20181.rentcontrol.model.Imovel;
+import io.realm.Realm;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    Realm realm;
     private GoogleMap mMap;
+    private Imovel imovel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +37,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
+
+
 
     /**
      * Manipulates the map once available.
@@ -48,7 +55,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
