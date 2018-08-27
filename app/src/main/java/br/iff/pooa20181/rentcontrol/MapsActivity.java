@@ -35,21 +35,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-
-    public Address getEndereco(String streetName) throws IOException {
-
-        Geocoder geocoder;
-        Address endereco = null;
-        List<Address> enderecos;
-        geocoder = new Geocoder(getApplicationContext());
-        enderecos = geocoder.getFromLocationName(streetName, 5);
-        if (enderecos.size() > 0){
-            Log.i("LOG", "Endereços ---> " + String.valueOf(enderecos.size()));
-            endereco = enderecos.get(0);
-        }
-        return endereco;
-    }
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
