@@ -14,13 +14,11 @@ import java.util.List;
 import br.iff.pooa20181.rentcontrol.R;
 import br.iff.pooa20181.rentcontrol.model.Contratos;
 
-import static br.iff.pooa20181.rentcontrol.R.layout.activity_item_contratos;
-
 public class ContratosAdapter extends RecyclerView.Adapter {
 
     private List<Contratos> contratos;
     private Context context;
-    private static ClickRecyclerViewListener clickRecyclerViewListener;
+    static ClickRecyclerViewListener clickRecyclerViewListener;
 
 
     public ContratosAdapter(List<Contratos> contratos, Context context, ClickRecyclerViewListener clickRecyclerViewListener) {
@@ -74,9 +72,9 @@ public class ContratosAdapter extends RecyclerView.Adapter {
 
             super( itemView );
 
-            nomeLocador = (TextView) itemView.findViewById( R.id.tvNomeLocador );
-            nomeLocatario = (TextView) itemView.findViewById( R.id.tvNomeLocatario );
-            valorAluguel = (TextView) itemView.findViewById( R.id.tvValorAluguel );
+            nomeLocador = (TextView) itemView.findViewById( R.id.tvNomeProprietário);
+            nomeLocatario = (TextView) itemView.findViewById( R.id.tvNomeLocatario);
+            valorAluguel = (TextView) itemView.findViewById( R.id.tvNomeLocatario);
             cepImovel = (TextView) itemView.findViewById( R.id.tvCepImovel );
 
             itemView.setOnClickListener( new View.OnClickListener() {

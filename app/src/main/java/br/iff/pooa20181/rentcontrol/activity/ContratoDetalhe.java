@@ -17,6 +17,8 @@ import br.iff.pooa20181.rentcontrol.R;
 import br.iff.pooa20181.rentcontrol.model.Contratos;
 import io.realm.Realm;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class ContratoDetalhe extends AppCompatActivity {
 
     EditText edNomeLocador, edEmailLocador, edTelefoneLocador, edNomeLocatario, edEmailLocatario, edTelefoneLocatario, edRua, edNumero, edCep, edCidade, edValor;
@@ -57,6 +59,8 @@ public class ContratoDetalhe extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), MapsActivity.class);
+                String message = edRua.getText().toString();
+                intent.putExtra(EXTRA_MESSAGE, message);
                 startActivity(intent);
 
             }

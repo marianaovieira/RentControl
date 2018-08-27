@@ -10,7 +10,7 @@ import br.iff.pooa20181.rentcontrol.R;
 
 public class Menu extends AppCompatActivity {
 
-    Button btnContratos;
+    Button btnContratos, btnImovel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +18,21 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         btnContratos =(Button) findViewById(R.id.btnContratos);
+        btnImovel =(Button) findViewById(R.id.btnImovel);
 
         btnContratos.setOnClickListener( new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ListaContratos.class);
+                startActivity(intent);
+            }
+        });
+
+        btnImovel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ListaImoveis.class);
                 startActivity(intent);
             }
         });

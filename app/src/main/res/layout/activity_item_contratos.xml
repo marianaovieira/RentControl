@@ -15,16 +15,25 @@
         android:layout_height="122dp">
 
 
-
         <TextView
             android:id="@+id/idCepImovel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="28dp"
             android:text="Cep imóvel:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/idValorAluguel" />
+
+        <TextView
+            android:id="@+id/idValorAluguel"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Valor do aluguel:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idNomeProprietario" />
 
         <TextView
             android:id="@+id/idValorAluguel"
@@ -32,27 +41,17 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="Valor do aluguel:"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idNomeLocatario" />
-
-        <TextView
-            android:id="@+id/idNomeLocatario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:text="Nome Locatário:"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idNomeLocador" />
+            app:layout_constraintTop_toBottomOf="@+id/idNomeProprietario" />
 
         <TextView
-            android:id="@+id/idNomeLocador"
+            android:id="@+id/idNomeProprietario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-            android:text="Nome Locador"
+            android:text="Nome Locador:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,21 +59,24 @@
             android:id="@+id/tvCepImovel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
             android:text="TextView"
             app:layout_constraintStart_toEndOf="@+id/idCepImovel"
-            app:layout_constraintTop_toBottomOf="@+id/tvValorAluguel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvNomeLocatario" />
 
         <TextView
-            android:id="@+id/tvValorAluguel"
+            android:id="@+id/tvNomeLocatario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
             android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/idValorAluguel"
-            app:layout_constraintTop_toBottomOf="@+id/tvNomeLocatario" />
+            app:layout_constraintTop_toTopOf="@+id/idValorAluguel" />
 
         <TextView
             android:id="@+id/tvNomeLocatario"
@@ -82,18 +84,17 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/idNomeLocatario"
-            app:layout_constraintTop_toBottomOf="@+id/tvNomeLocador" />
+            app:layout_constraintStart_toEndOf="@+id/idValorAluguel"
+            app:layout_constraintTop_toBottomOf="@+id/tvNomeProprietário" />
 
         <TextView
-            android:id="@+id/tvNomeLocador"
+            android:id="@+id/tvNomeProprietário"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
             android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/idNomeLocador"
+            app:layout_constraintStart_toEndOf="@+id/idNomeProprietario"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

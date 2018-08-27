@@ -51,7 +51,12 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".activity.Menu"></activity>
+        <activity android:name=".activity.Menu" />
+        <activity
+            android:name=".activity.ListaImoveis"
+            android:label="@string/title_activity_imovel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.ImovelDetalhe"></activity>
     </application>
 
 </manifest>
